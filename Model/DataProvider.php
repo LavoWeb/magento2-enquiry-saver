@@ -1,19 +1,11 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Model;
 
+use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 use Magento\Ui\DataProvider\Modifier\ModifierInterface;
 use Magento\Ui\DataProvider\Modifier\PoolInterface;
-use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory;
 
 class DataProvider extends AbstractDataProvider
 {
@@ -39,9 +31,10 @@ class DataProvider extends AbstractDataProvider
         PoolInterface $pool,
         array $meta = [],
         array $data = []
-    ) {
-        $this->collection   = $enquiryCollectionFactory->create();
-        $this->pool         = $pool;
+    )
+    {
+        $this->collection = $enquiryCollectionFactory->create();
+        $this->pool = $pool;
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->meta = $this->prepareMeta($this->meta);
     }

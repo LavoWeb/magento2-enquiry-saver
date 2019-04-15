@@ -1,13 +1,5 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Api\Data;
 
 /**
@@ -15,11 +7,11 @@ namespace LavoWeb\EnquirySaver\Api\Data;
  */
 interface EnquiryInterface
 {
-    const ENQUIRY_ID    = 'enquiry_id';
-    const NAME          = 'name';
-    const EMAIL         = 'email';
-    const TELEPHONE     = 'telephone';
-    const COMMENT       = 'comment';
+    const ENQUIRY_ID = 'enquiry_id';
+    const NAME = 'name';
+    const EMAIL = 'email';
+    const TELEPHONE = 'telephone';
+    const COMMENT = 'comment';
 
     /**
      * Get ID

@@ -1,21 +1,13 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Controller\Adminhtml;
 
+use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\ForwardFactory;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
-use Magento\Backend\Model\View\Result\ForwardFactory;
-use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 
 abstract class EnquirySaver extends Action
 {
@@ -67,11 +59,12 @@ abstract class EnquirySaver extends Action
         PageFactory $resultPageFactory,
         ForwardFactory $resultForwardFactory,
         Context $context
-    ) {
+    )
+    {
         parent::__construct($context);
-        $this->coreRegistry         = $registry;
-        $this->enquiryRepository    = $enquiryRepository;
-        $this->resultPageFactory    = $resultPageFactory;
+        $this->coreRegistry = $registry;
+        $this->enquiryRepository = $enquiryRepository;
+        $this->resultPageFactory = $resultPageFactory;
         $this->resultForwardFactory = $resultForwardFactory;
     }
 }

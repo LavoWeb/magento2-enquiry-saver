@@ -1,14 +1,5 @@
 <?php
-// @codingStandardsIgnoreFile
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;

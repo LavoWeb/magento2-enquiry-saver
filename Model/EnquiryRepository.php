@@ -1,25 +1,17 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Model;
 
-use Magento\Framework\Api\DataObjectHelper;
-use Magento\Framework\Exception\CouldNotSaveException;
-use Magento\Framework\Exception\StateException;
-use Magento\Framework\Exception\ValidatorException;
-use Magento\Framework\Exception\NoSuchEntityException;
-use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 use LavoWeb\EnquirySaver\Api\Data\EnquiryInterface;
 use LavoWeb\EnquirySaver\Api\Data\EnquiryInterfaceFactory;
+use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry as ResourceEnquiry;
 use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory as EnquiryCollectionFactory;
+use Magento\Framework\Api\DataObjectHelper;
+use Magento\Framework\Exception\CouldNotSaveException;
+use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Framework\Exception\StateException;
+use Magento\Framework\Exception\ValidatorException;
 
 class EnquiryRepository implements EnquiryRepositoryInterface
 {
@@ -52,7 +44,8 @@ class EnquiryRepository implements EnquiryRepositoryInterface
         EnquiryCollectionFactory $enquiryCollectionFactory,
         EnquiryInterfaceFactory $enquiryInterfaceFactory,
         DataObjectHelper $dataObjectHelper
-    ) {
+    )
+    {
         $this->resource = $resource;
         $this->enquiryCollectionFactory = $enquiryCollectionFactory;
         $this->enquiryInterfaceFactory = $enquiryInterfaceFactory;
@@ -76,6 +69,16 @@ class EnquiryRepository implements EnquiryRepositoryInterface
             ));
         }
         return $enquiry;
+    }
+
+    /**
+     * @param $enquiryId
+     * @return bool
+     */
+    public function deleteById($enquiryId)
+    {
+        $enquiry = $this->getById($enquiryId);
+        return $this->delete($enquiry);
     }
 
     /**
@@ -121,15 +124,5 @@ class EnquiryRepository implements EnquiryRepositoryInterface
         }
         unset($this->instances[$id]);
         return true;
-    }
-
-    /**
-     * @param $enquiryId
-     * @return bool
-     */
-    public function deleteById($enquiryId)
-    {
-        $enquiry = $this->getById($enquiryId);
-        return $this->delete($enquiry);
     }
 }

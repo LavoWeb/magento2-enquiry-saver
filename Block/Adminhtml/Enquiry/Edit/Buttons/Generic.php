@@ -1,18 +1,10 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Block\Adminhtml\Enquiry\Edit\Buttons;
 
+use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 use Magento\Backend\Block\Widget\Context;
 use Magento\Framework\Exception\NoSuchEntityException;
-use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
 
 class Generic
 {
@@ -33,7 +25,8 @@ class Generic
     public function __construct(
         Context $context,
         EnquiryRepositoryInterface $enquiryRepository
-    ) {
+    )
+    {
         $this->context = $context;
         $this->enquiryRepository = $enquiryRepository;
     }

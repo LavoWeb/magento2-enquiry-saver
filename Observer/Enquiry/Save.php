@@ -1,28 +1,20 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Observer\Enquiry;
 
-use Magento\Framework\Event\ObserverInterface;
-use Magento\Framework\Event\Observer;
-use Magento\Framework\App\RequestInterface;
+use LavoWeb\EnquirySaver\Api\Data\EnquiryInterface;
+use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
+use LavoWeb\EnquirySaver\Model\EnquiryFactory;
 use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\App\RequestInterface;
+use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
 use Magento\Store\Model\ScopeInterface;
-use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
-use LavoWeb\EnquirySaver\Api\Data\EnquiryInterface;
-use LavoWeb\EnquirySaver\Model\EnquiryFactory;
 
 class Save implements ObserverInterface
 {
-    const XML_PATH_CONTACTS_ENABLED     = 'contact/contact/enabled';
+    const XML_PATH_CONTACTS_ENABLED = 'contact/contact/enabled';
     const XML_PATH_ENQUIRYSAVER_ENABLED = 'contact/contact/enable_enquirysaver';
 
     /**
@@ -64,7 +56,8 @@ class Save implements ObserverInterface
         ScopeConfigInterface $scopeConfig,
         EnquiryRepositoryInterface $enquiryRepositoryInterface,
         EnquiryFactory $enquiryFactory
-    ) {
+    )
+    {
         $this->request = $request;
         $this->dataObjectHelper = $dataObjectHelper;
         $this->scopeConfig = $scopeConfig;

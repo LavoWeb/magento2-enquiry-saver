@@ -1,26 +1,16 @@
 <?xml version="1.0"?>
-<!--
-/*
- * LavoWeb_EnquirySaver
-
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
- -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add
-            id="LavoWeb_EnquirySaver::contact_enquiries"
-            title="Contact Form Enquiries"
-            translate="title"
-            module="LavoWeb_EnquirySaver"
-            sortOrder="75"
-            parent="Magento_Backend::marketing_communications"
-            action="enquirysaver/index"
-            resource="LavoWeb_EnquirySaver::contact_enquiries"
+                id="LavoWeb_EnquirySaver::contact_enquiries"
+                title="Contact Form Enquiries"
+                translate="title"
+                module="LavoWeb_EnquirySaver"
+                sortOrder="75"
+                parent="Magento_Backend::marketing_communications"
+                action="enquirysaver/index"
+                resource="LavoWeb_EnquirySaver::contact_enquiries"
         />
     </menu>
 </config>

@@ -1,17 +1,9 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Ui\DataProvider\Enquiry\Form\Modifier;
 
-use Magento\Ui\DataProvider\Modifier\ModifierInterface;
 use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory;
+use Magento\Ui\DataProvider\Modifier\ModifierInterface;
 
 class EnquiryData implements ModifierInterface
 {
@@ -25,7 +17,8 @@ class EnquiryData implements ModifierInterface
      */
     public function __construct(
         CollectionFactory $enquiryCollectionFactory
-    ) {
+    )
+    {
         $this->collection = $enquiryCollectionFactory->create();
     }
 

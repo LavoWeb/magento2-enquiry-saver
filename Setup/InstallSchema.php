@@ -1,19 +1,11 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Setup;
 
+use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
-use Magento\Framework\DB\Ddl\Table;
 
 class InstallSchema implements InstallSchemaInterface
 {
@@ -22,9 +14,9 @@ class InstallSchema implements InstallSchemaInterface
     {
         $installer = $setup;
         $installer->startSetup();
-        $tableName = $installer->getTable('LavoWeb_enquirysaver_enquiries');
+        $tableName = $installer->getTable('lavoweb_enquirysaver_enquiries');
 
-        if (!$installer->tableExists('LavoWeb_enquirysaver_enquiries')) {
+        if (!$installer->tableExists('lavoweb_enquirysaver_enquiries')) {
             $table = $installer->getConnection()
                 ->newTable($tableName)
                 ->addColumn(

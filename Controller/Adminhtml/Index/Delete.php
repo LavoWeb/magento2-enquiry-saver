@@ -1,18 +1,10 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Controller\Adminhtml\Index;
 
+use LavoWeb\EnquirySaver\Controller\Adminhtml\EnquirySaver;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
-use LavoWeb\EnquirySaver\Controller\Adminhtml\EnquirySaver;
 
 class Delete extends EnquirySaver
 {

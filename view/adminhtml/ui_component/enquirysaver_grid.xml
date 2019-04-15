@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-/*
- * LavoWeb_EnquirySaver
-
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
- -->
-<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid_source</item>
@@ -55,7 +45,9 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
-                        <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns</item>
+                        <item name="provider" xsi:type="string">
+                            enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns
+                        </item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
                     <item name="displayArea" xsi:type="string">enquiryGridActions</item>
@@ -65,7 +57,9 @@
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">
+                        enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.ids
+                    </item>
                     <item name="indexField" xsi:type="string">enquiry_id</item>
                 </item>
             </argument>
@@ -77,7 +71,9 @@
                         <item name="url" xsi:type="url" path="enquirysaver/index/massDelete"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Delete items</item>
-                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected items?</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete
+                                selected items?
+                            </item>
                         </item>
                     </item>
                 </argument>
@@ -87,10 +83,14 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">
+                            enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks
+                        </item>
                         <item name="namespace" xsi:type="string">current.paging</item>
                     </item>
-                    <item name="selectProvider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">
+                        enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.ids
+                    </item>
                 </item>
             </argument>
         </paging>
@@ -99,12 +99,15 @@
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="storageConfig" xsi:type="array">
-                    <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks</item>
+                    <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks
+                    </item>
                     <item name="namespace" xsi:type="string">current</item>
                 </item>
                 <item name="childDefaults" xsi:type="array">
                     <item name="fieldAction" xsi:type="array">
-                        <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.actions</item>
+                        <item name="provider" xsi:type="string">
+                            enquirysaver_grid.enquirysaver_grid.enquirysaver_grid_columns.actions
+                        </item>
                         <item name="target" xsi:type="string">applyAction</item>
                         <item name="params" xsi:type="array">
                             <item name="0" xsi:type="string">edit</item>
@@ -113,7 +116,9 @@
                     </item>
                     <item name="controlVisibility" xsi:type="boolean">true</item>
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">
+                            enquirysaver_grid.enquirysaver_grid.listing_top.bookmarks
+                        </item>
                         <item name="root" xsi:type="string">columns.${ $.index }</item>
                         <item name="namespace" xsi:type="string">current.${ $.storageConfig.root}</item>
                     </item>

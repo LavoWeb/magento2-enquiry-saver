@@ -1,21 +1,13 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Model;
 
+use LavoWeb\EnquirySaver\Api\Data\EnquiryInterface;
 use Magento\Framework\Data\Collection\AbstractDb;
 use Magento\Framework\Model\AbstractModel;
 use Magento\Framework\Model\Context;
 use Magento\Framework\Model\ResourceModel\AbstractResource;
 use Magento\Framework\Registry;
-use LavoWeb\EnquirySaver\Api\Data\EnquiryInterface;
 
 class Enquiry extends AbstractModel implements EnquiryInterface
 {
@@ -39,18 +31,9 @@ class Enquiry extends AbstractModel implements EnquiryInterface
         AbstractResource $resource = null,
         AbstractDb $resourceCollection = null,
         array $data = []
-    ) {
-        parent::__construct($context, $registry, $resource, $resourceCollection, $data);
-    }
-
-    /**
-     * Initialise resource model
-     * @codingStandardsIgnoreStart
-     */
-    protected function _construct()
+    )
     {
-        // @codingStandardsIgnoreEnd
-        $this->_init('LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry');
+        parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }
 
     /**
@@ -145,5 +128,15 @@ class Enquiry extends AbstractModel implements EnquiryInterface
     public function setComment($comment)
     {
         return $this->setData(EnquiryInterface::COMMENT, $comment);
+    }
+
+    /**
+     * Initialise resource model
+     * @codingStandardsIgnoreStart
+     */
+    protected function _construct()
+    {
+        // @codingStandardsIgnoreEnd
+        $this->_init('LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry');
     }
 }

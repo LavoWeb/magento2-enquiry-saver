@@ -1,24 +1,16 @@
 <?php
-/*
- * LavoWeb_EnquirySaver
 
- * @category   LavoWeb
- * @package    LavoWeb_EnquirySaver
- * @copyright  Copyright (c) 2017 LavoWeb
- * @license    https://github.com/LavoWeb/magento2-enquiry-saver/blob/master/LICENSE.md
- * @version    1.0.0
- */
 namespace LavoWeb\EnquirySaver\Controller\Adminhtml\Index;
 
+use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
+use LavoWeb\EnquirySaver\Controller\Adminhtml\EnquirySaver;
+use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\ForwardFactory;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Ui\Component\MassAction\Filter;
-use LavoWeb\EnquirySaver\Api\EnquiryRepositoryInterface;
-use LavoWeb\EnquirySaver\Controller\Adminhtml\EnquirySaver;
-use LavoWeb\EnquirySaver\Model\ResourceModel\Enquiry\CollectionFactory;
 
 class MassDelete extends EnquirySaver
 {
@@ -69,12 +61,13 @@ class MassDelete extends EnquirySaver
         CollectionFactory $collectionFactory,
         $successMessage,
         $errorMessage
-    ) {
+    )
+    {
         parent::__construct($registry, $enquiryRepository, $resultPageFactory, $resultForwardFactory, $context);
-        $this->filter            = $filter;
+        $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
-        $this->successMessage    = $successMessage;
-        $this->errorMessage      = $errorMessage;
+        $this->successMessage = $successMessage;
+        $this->errorMessage = $errorMessage;
     }
 
     /**
